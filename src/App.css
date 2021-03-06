@@ -1,38 +1,151 @@
+* {
+  background-color: #26457e;
+}
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.card {
+  position: relative;
+  width: 70%;
+  height: 70%;
+  margin: auto;
+  margin-bottom: 10px;
+  margin-top: 3.5%;
+  background: linear-gradient(45deg, #3a86b8 30%, #156e85 90%);
+  background-size: cover;
+  box-shadow: 5px 10px 5px 10px rgb(29, 4, 4);
+  padding: 20px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.title {
   color: white;
+  font-weight: 800;
+  font-size: 30px;
+}
+.search-form {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.search-form input {
+  width: 90%;
+  height: 40px;
+  padding: 5px;
+  border: 1px solid #000000;
+  background: #000000;
+  color: #fff;
+  border-radius: 10px;
+  margin: 0 auto;
 }
 
-.App-link {
-  color: #61dafb;
+.search-form button {
+  width: 8%;
+  height: 50px;
+  padding: 5px;
+  border: none;
+  border-radius: 10px !important;
+  background: linear-gradient(45deg, #2a9115 30%, #1f1c18 90%);
+  font-weight: 400;
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+}
+.search-form button:hover {
+  background: linear-gradient(45deg, #093258 30%, #1a1072 90%);
+  color: black;
+}
+.main-container {
+  width: 100%;
+  height: auto;
+  color: rgba(255, 255, 255, 0.541);
+  text-align: center;
+  margin-top: 30px;
 }
 
-@keyframes App-logo-spin {
+.main-container h4 {
+  font-size: 25px;
+  font-weight: 800;
+}
+
+.main-container .weather-icon img {
+  width: 100px;
+  height: 100px;
+  animation: iconanimation 3s infinite;
+}
+@keyframes iconanimation {
   from {
-    transform: rotate(0deg);
+    transform: scale(0.5, 0.5);
   }
   to {
+    transform: scale(1, 1);
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .search-form input {
+    width: 70%;
+  }
+  .search-form button {
+    width: 25%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .search-form input {
+    width: 70%;
+  }
+  .search-form button {
+    width: 25%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .search-form input {
+    width: 80%;
+  }
+  .search-form button {
+    width: 18%;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .search-form input {
+    width: 80%;
+  }
+  .search-form button {
+    width: 18%;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .search-form input {
+    width: 90%;
+  }
+  .search-form button {
+    width: 8%;
+  }
+}
+
+.temperature h1 {
+  font-size: 30px;
+  font-weight: 900;
+}
+
+.location h3 i {
+  margin-right: 10px;
+  animation: locationicon 2s infinite;
+}
+
+@keyframes locationicon {
+  0% {
+    transform: rotate(0 deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
     transform: rotate(360deg);
   }
+}
+
+.loader-container {
+  margin: 15%;
 }
